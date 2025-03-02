@@ -58,7 +58,7 @@ public class SearchFile {
     String pageToken = null;
     do {
       FileList result = service.files().list()
-          .setQ("mimeType='image/jpeg'")
+          .setQ("mimeType='application/vnd.google-apps.folder'")
           .setSpaces("drive")
           .setFields("nextPageToken, items(id, title)")
           .setPageToken(pageToken)
